@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8F005;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  height: 69px;
+  box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.36);
+  border-radius: 20px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.item {
+  width: 150px;
+  height: 69px;
+  border: 1px solid rgb(47, 202, 81);
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: linear-gradient(180deg, black, red);
+  padding: 1.5rem 1rem;
+  color: whitesmoke;
+  text-align: center;
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+}
+
+.start {
+  background: linear-gradient(90deg, #0c28ca 0%, #fdf922 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #ff2058 0%, #60b1a6 100%);
+}
+
+.done {
+  background: linear-gradient(90deg, #2afc77 0%, #eb957b 100%);
+}
+
+.hold {
+  border: 2px solid rgb(0, 0, 0);
+	background: linear-gradient(180deg, orange, blue);
+  color: #d9dfa9;
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  border-top: 10px inset #8ed7ed;
+  text-decoration: none;
+  border: 3px solid yellow;
+  color: transparent;
+  padding: 40px 80px;
+  font-size: 28px;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 0.5s;
+  position: relative;
+}
+.hovered:before {
+  content: "Drop Me";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  background: rgb(34, 34, 34);
+  font-size: 28px;
+  top: 0;
+  left: 100%;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(0) rotatey(0);
+  opacity: 0;
+  border-radius: 20px;
+}
+.hovered:hover:before {
+  transform: scale(1) rotatey(360deg);
+  left: 0;
+  opacity: 1;
+}
+.hovered:after {
+  content: "Drop Me";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  background: rgb(34, 34, 34);
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+  transition: all 1s;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: scale(1) rotatey(0);
+  opacity: 1;
+  border-radius: 20px;
+}
+.hovered:hover:after {
+  transform: scale(0) rotatey(360deg);
+  left: -100%;
+  opacity: 0;
+}
